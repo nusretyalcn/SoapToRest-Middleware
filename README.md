@@ -83,26 +83,73 @@ Follow these steps to send a SOAP POST request using Postman:
 
 #### REST API Response
 ```json
-{
-  "AccountId": 123,
-  "Name": "John Doe",
-  "Balance": 5000
-}
+[
+    {
+        "id": 2,
+        "userId": 12485,
+        "accountNumber": "00012366557",
+        "accountType": 1,
+        "balance": 500.0000,
+        "createdAt": "2025-01-22T17:51:45.94",
+        "updatedAt": "2025-01-22T17:51:45.94"
+    },
+    {
+        "id": 3,
+        "userId": 12486,
+        "accountNumber": "00452366557",
+        "accountType": 1,
+        "balance": 37800.0000,
+        "createdAt": "2025-01-22T17:51:45.94",
+        "updatedAt": "2025-01-22T17:51:45.94"
+    },
+    {
+        "id": 4,
+        "userId": 12336,
+        "accountNumber": "001942366557",
+        "accountType": 2,
+        "balance": 800.0000,
+        "createdAt": "2025-01-22T17:51:45.94",
+        "updatedAt": "2025-01-22T17:51:45.94"
+    }
+]
 ```
 
 #### SOAP Response (Final Output)
 ```xml
-<Envelope>
-  <Body>
-    <GetAccountResponse>
-      <Account>
-        <AccountId>123</AccountId>
-        <Name>John Doe</Name>
-        <Balance>5000</Balance>
-      </Account>
-    </GetAccountResponse>
-  </Body>
-</Envelope>
+        
+<soap:Envelope xmlns:soap='http://schemas.xmlsoap.org/soap/envelope/'>
+    <soap:Body>
+        <Root>
+            <Root>
+                <id>2</id>
+                <userId>12485</userId>
+                <accountNumber>00012366557</accountNumber>
+                <accountType>1</accountType>
+                <balance>500</balance>
+                <createdAt>2025-01-22T17:51:45.94</createdAt>
+                <updatedAt>2025-01-22T17:51:45.94</updatedAt>
+            </Root>
+            <Root>
+                <id>3</id>
+                <userId>12486</userId>
+                <accountNumber>00452366557</accountNumber>
+                <accountType>1</accountType>
+                <balance>37800</balance>
+                <createdAt>2025-01-22T17:51:45.94</createdAt>
+                <updatedAt>2025-01-22T17:51:45.94</updatedAt>
+            </Root>
+            <Root>
+                <id>4</id>
+                <userId>12336</userId>
+                <accountNumber>001942366557</accountNumber>
+                <accountType>2</accountType>
+                <balance>800</balance>
+                <createdAt>2025-01-22T17:51:45.94</createdAt>
+                <updatedAt>2025-01-22T17:51:45.94</updatedAt>
+            </Root>
+        </Root>
+    </soap:Body>
+</soap:Envelope>
 ```
 
 ## Contributing
