@@ -67,7 +67,8 @@ Follow these steps to send a SOAP POST request using Postman:
   http://your-local-host/api/Account/getall
   ```
 
-  #### SOAP Request Body
+### 3. Enter the Body
+-Choose Body from the dropdown menu(raw and xml)
 ```xml
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
                   xmlns:web="http://example.com/webservice">
@@ -78,8 +79,7 @@ Follow these steps to send a SOAP POST request using Postman:
 </soapenv:Envelope>
 ```
 ### 3. Set Headers
-- Choose **POST** from the dropdown menu next to the URL field.
-
+- Key:Content-Type  Value:text/xml
 
 #### REST API Response
 ```json
